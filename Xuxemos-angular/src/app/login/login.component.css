@@ -1,18 +1,78 @@
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Fondo gris claro */
+  
 }
 
-.example-full-width {
-  width: 100%;
-}
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+.dir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 30%;
 }
 
-.example-full-width {
+.form-container {
+  padding-top: 20%;
+  margin-top: 10%;
+  background-color: #f2ccfd; /* Fondo rosa claro */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  max-width: 400px;
   width: 100%;
+  text-align: center;
+  margin: 0 auto; /* Centrar horizontalmente */
+  border: 4px solid #ff04c9; /* Borde naranja */
+}
+
+label {
+  color: #8e44ad; 
+  font-size: 18px;
+}
+
+input[type="text"] {
+  width: calc(100% - 20px); 
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #8e44ad; 
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: calc(100% - 20px); 
+  background-color: #8e44ad; 
+  color: #fff;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #6c3483;
+}
+
+/* Colores adicionales */
+label, input[type="text"], input[type="submit"] {
+  border-color: #8e44ad; 
+}
+
+input[type="text"]:focus {
+  border-color: #570063; 
+}
+
+input[type="submit"]:hover {
+  background-color: #570063; 
+}
+
+hr {
+  border: 0; /* Remueve el borde predeterminado */
+  height: 2px; /* Establece la altura deseada */
+  background-color: #6c3483; /* Color de fondo */
+  margin: 30px 50px; /* Espacio alrededor del hr */
 }
