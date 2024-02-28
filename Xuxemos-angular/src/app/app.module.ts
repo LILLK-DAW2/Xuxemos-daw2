@@ -11,6 +11,9 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 import { RegisterComponent } from './register/register.component';
 import { MenuComponent } from './menu/menu.component';
+import {RouterOutlet} from "@angular/router";
+import {HttpClientModule} from "@angular/common/http";
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -20,15 +23,18 @@ import { MenuComponent } from './menu/menu.component';
     RegisterComponent,
     MenuComponent
   ],
-  imports: [
-    ReactiveFormsModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatCardModule
-  ],
+    imports: [
+        ReactiveFormsModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatCardModule,
+        RouterOutlet,
+        HttpClientModule,
+        AppRoutingModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

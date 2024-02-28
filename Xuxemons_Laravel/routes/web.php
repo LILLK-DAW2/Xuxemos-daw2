@@ -18,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::middleware('cors')->group(function (){
+    Route::post('login',[LogAuth::class,'login']);
+    Route::post('register',[RegisterAuth::class,'register']);
+});
 
-Route::post('login',[LogAuth::class, 'login']);
 
-Route::post('register',[RegisterAuth::class,'register']);
