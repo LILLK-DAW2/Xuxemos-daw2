@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::middleware('cors')->group(function (){
     Route::post('login',[LogAuth::class,'login']);
     Route::post('register',[RegisterAuth::class,'register']);
+    Route::post('logout',[LogAuth::class,'logout']);
 });
 
 

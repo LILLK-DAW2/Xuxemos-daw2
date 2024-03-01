@@ -35,7 +35,7 @@ export class RegisterComponent implements OnInit {
     const nombre = this.registerForm.value.nombre;
     const apellidos = this.registerForm.value.apellidos;
     const telefono = this.registerForm.value.telefono;
-    const email = this.registerForm.value.correo;
+    const email = this.registerForm.value.mail;
     const password= this.registerForm.value.password;
 
     const token =this.userService.register(nombre_u,nombre,apellidos,email,telefono, password).subscribe({

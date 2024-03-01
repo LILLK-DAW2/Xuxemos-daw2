@@ -23,7 +23,7 @@ class LogAuth extends Controller
 
         if ($user && Hash::check($credenciales['password'], $user->password)) {
 
-            Auth::login($user);
+            Auth::login($user,true);
             $token =$request->session()->token();
 
             $user->remember_token=$token;
@@ -34,5 +34,19 @@ class LogAuth extends Controller
             ],200);
         }
         return 'Credenciales no válidas. Por favor, inténtalo de nuevo.';
+    }
+    public function logout(Request $request)
+    {
+
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return response()->json([
+        'logout'=>'logout correcto'
+            ],200);
+
     }
 }

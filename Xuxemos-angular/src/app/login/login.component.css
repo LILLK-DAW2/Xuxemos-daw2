@@ -2,7 +2,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0; /* Fondo gris claro */
-  
+
 }
 
 .div{
@@ -37,6 +37,14 @@ label {
 }
 
 input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #8e44ad;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+input[type="password"] {
   width: calc(100% - 20px);
   padding: 10px;
   margin: 10px 0;
@@ -115,22 +123,22 @@ a:hover {
 }
 
 label {
-  color: #8e44ad; 
+  color: #8e44ad;
   font-size: 18px;
 }
 
 input[type="text"] {
-  width: calc(100% - 20px); 
+  width: calc(100% - 20px);
   padding: 10px;
   margin: 10px 0;
-  border: 2px solid #8e44ad; 
+  border: 2px solid #8e44ad;
   border-radius: 5px;
   box-sizing: border-box;
 }
 
 input[type="submit"] {
-  width: calc(100% - 20px); 
-  background-color: #8e44ad; 
+  width: calc(100% - 20px);
+  background-color: #8e44ad;
   color: #fff;
   border: none;
   padding: 12px;
@@ -146,15 +154,15 @@ input[type="submit"]:hover {
 
 /* Colores adicionales */
 label, input[type="text"], input[type="submit"] {
-  border-color: #8e44ad; 
+  border-color: #8e44ad;
 }
 
 input[type="text"]:focus {
-  border-color: #570063; 
+  border-color: #570063;
 }
 
 input[type="submit"]:hover {
-  background-color: #570063; 
+  background-color: #570063;
 }
 
 hr {
@@ -165,8 +173,8 @@ hr {
 }
 
 a{
-  width: calc(100% - 20px); 
-  background-color: #8e44ad; 
+  width: calc(100% - 20px);
+  background-color: #8e44ad;
   color: #fff;
   border: none;
   padding: 12px;
@@ -178,5 +186,5 @@ a{
 
 a:hover{
 
-  background-color: #570063; 
+  background-color: #570063;
 }
