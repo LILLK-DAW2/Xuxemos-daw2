@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Xuxemon extends Model
 {
     use HasFactory;
-    protected $fillable = ['nombre', 'tipo', 'archivo', 'descripcion'];
+    protected $fillable = ['nombre','vida', 'tipo_id', 'archivo', 'descripcion'];
 
     public function tipo()
     {

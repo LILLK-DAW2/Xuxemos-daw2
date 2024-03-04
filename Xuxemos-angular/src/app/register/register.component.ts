@@ -43,6 +43,7 @@ export class RegisterComponent implements OnInit {
       error: err => alert(err)
     });
     console.log('tokenddd'+token);
+    //mandar al login una vez usuario creado
   }
 
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Log\LogAuth;
 use App\Http\Controllers\Log\RegisterAuth;
+use App\Http\Controllers\xuxemonsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +24,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::middleware('cors')->group(function (){
     Route::post('login',[LogAuth::class,'login']);
     Route::post('register',[RegisterAuth::class,'register']);
+
+    Route::get('xuxemonsIndex',[XuxemonsController::class,'index']);
+    Route::post('xuxemonsCreate',[XuxemonsController::class,'store']);
+    Route::delete('xuxemonsDelete',[XuxemonsController::class,'destroy']);
+    Route::post('xuxemonsUpdate',[XuxemonsController::class,'update']);
+
 });

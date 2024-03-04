@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
       next: value => console.log(value),
       error: err => alert(err)
     });
-    console.log(token);
+    //console.log(token);
     this.router.navigate(['/menu']);
   }
 }
