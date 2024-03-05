@@ -11,6 +11,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 import { RegisterComponent } from './register/register.component';
 import { MenuComponent } from './menu/menu.component';
+import { ColeccionComponent } from './coleccion/coleccion.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { MenuComponent } from './menu/menu.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    MenuComponent
+    MenuComponent,
+    ColeccionComponent
   ],
   imports: [
     ReactiveFormsModule,
