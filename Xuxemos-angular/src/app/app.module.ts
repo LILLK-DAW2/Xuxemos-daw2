@@ -14,6 +14,7 @@ import { MenuComponent } from './menu/menu.component';
 import {RouterOutlet} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
+import { CrudXuxemonsComponent } from './crud/crudXuxemos/crud-xuxemons/crud-xuxemons.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    MenuComponent
+    MenuComponent,
+    CrudXuxemonsComponent
   ],
     imports: [
         ReactiveFormsModule,

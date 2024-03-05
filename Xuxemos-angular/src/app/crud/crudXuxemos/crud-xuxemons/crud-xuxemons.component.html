@@ -1,0 +1,63 @@
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">Vida</th>
+    <th scope="col">Tipo</th>
+    <th scope="col">Archivo</th>
+    <th scope="col">Descripcion</th>
+    <th scope="col">Created_at</th>
+    <th scope="col">Updated_at</th>
+    <th scope="col">Eliminar</th>
+    <th scope="col">Modificar</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor=" let xuxemon of xuxemons">
+    <th scope="row">{{xuxemon.id}}</th>
+    <td>{{xuxemon.nombre}}</td>
+    <td>{{xuxemon.vida}}</td>
+    <td>{{xuxemon.tipo_id}}</td>
+    <td>{{xuxemon.archivo}}</td>
+    <td>{{xuxemon.descripcion}}</td>
+    <td>{{xuxemon.created_at}}</td>
+    <td>{{xuxemon.updated_at}}</td>
+
+    <td>
+      <button type="button" class="btn btn-dark" (click)="destroyXuxemon(xuxemon.id)">Eliminar</button>
+    </td>
+    <td>
+      <button type="button" class="btn btn-dark">Modificar</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<section class="container m-4">
+  <form [formGroup]="addXuxemonForm">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control" id="nombre" placeholder="Nombre" formControlName="nombre">
+    </div>
+    <div class="form-group">
+      <label for="vida">Vida</label>
+      <input type="number" class="form-control" id="vida" placeholder="Vida" formControlName="vida">
+    </div>
+    <div class="form-group">
+      <label for="tipo_id">Tipo ID</label>
+      <input type="number" class="form-control" id="tipo_id" placeholder="Tipo ID" formControlName="tipo_id">
+    </div>
+    <div class="form-group">
+      <label for="archivo">Archivo</label>
+      <input type="text" class="form-control" id="archivo" placeholder="Archivo" formControlName="archivo">
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <textarea class="form-control" id="descripcion" rows="3" placeholder="Descripción" formControlName="descripcion"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addXuxemon()" >Submit</button>
+  </form>
+
+</section>
+
+<button (click)="importXuxemons()" >Puttaaa</button>

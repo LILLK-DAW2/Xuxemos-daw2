@@ -4,17 +4,21 @@ import {RouterModule, Routes} from "@angular/router";
 import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
 import {MenuComponent} from "./menu/menu.component";
+import {CrudXuxemonsComponent} from "./crud/crudXuxemos/crud-xuxemons/crud-xuxemons.component";
 
 
 const routes : Routes=[
   {
-    path:'welcome',  component : LoginComponent,
+    path:'welcome',  component : CrudXuxemonsComponent,
   },
   {
     path:'login',  component : LoginComponent,
   },
   {
     path:'menu',  component : MenuComponent,
+  },
+  {
+    path:'crudXuxemons',  component : CrudXuxemonsComponent,
   },
   {
     path:'register',  component : RegisterComponent,

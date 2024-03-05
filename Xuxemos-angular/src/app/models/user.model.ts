@@ -1,6 +1,6 @@
 export interface User {
   id: number;
-  token: number;
+  token: string;
   nombre: string;
   apellidos: string;
   telefeno: string;
