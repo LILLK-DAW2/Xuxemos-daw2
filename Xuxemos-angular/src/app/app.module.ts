@@ -15,6 +15,7 @@ import { ColeccionComponent } from './coleccion/coleccion.component';
 import { ObjetosComponent } from './objetos/objetos.component';
 import { InventarioComponent } from './inventario/inventario.component';
 import { XuxedexComponent } from './xuxedex/xuxedex.component';
+import { TarjetaColeccionComponent } from './coleccion/tarjeta-coleccion/tarjeta-coleccion.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { XuxedexComponent } from './xuxedex/xuxedex.component';
     ColeccionComponent,
     ObjetosComponent,
     InventarioComponent,
-    XuxedexComponent
+    XuxedexComponent,
+    TarjetaColeccionComponent
   ],
   imports: [
     ReactiveFormsModule,
