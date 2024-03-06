@@ -12,6 +12,9 @@ import {MatCardModule} from "@angular/material/card";
 import { RegisterComponent } from './register/register.component';
 import { MenuComponent } from './menu/menu.component';
 import { ColeccionComponent } from './coleccion/coleccion.component';
+import { ObjetosComponent } from './objetos/objetos.component';
+import { InventarioComponent } from './inventario/inventario.component';
+import { XuxedexComponent } from './xuxedex/xuxedex.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { ColeccionComponent } from './coleccion/coleccion.component';
     LoginComponent,
     RegisterComponent,
     MenuComponent,
-    ColeccionComponent
+    ColeccionComponent,
+    ObjetosComponent,
+    InventarioComponent,
+    XuxedexComponent
   ],
   imports: [
     ReactiveFormsModule,
