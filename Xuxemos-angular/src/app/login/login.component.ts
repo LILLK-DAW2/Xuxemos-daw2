@@ -26,9 +26,9 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     if (this.loginForm.valid) {
-      console.log(this.loginForm.value);
+      this.login();
     }
-    this.login();
+
 
   }
   login() {
@@ -38,10 +38,10 @@ export class LoginComponent implements OnInit {
 
 
     const token = this.userService.login(nombre_u, password).subscribe({
-      next: value => console.log(value),
+      next: value => this.router.navigate(['/menu']),
       error: err => alert(err)
     });
     //console.log(token);
-    this.router.navigate(['/menu']);
+
   }
 }

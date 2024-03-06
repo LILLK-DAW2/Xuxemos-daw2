@@ -1,0 +1,25 @@
+<section class="container m-4">
+  <form [formGroup]="modXuxemonForm">
+      <label >ID</label>
+      <input type="text"   formControlName="id"   [(ngModel)]="xuxemons['id']" readonly >
+
+      <label >Nombre</label>
+      <input type="text"   formControlName="nombre" [(ngModel)]="xuxemons['nombre']" >
+
+      <label >Vida</label>
+      <input type="number"   formControlName="vida" [(ngModel)]="xuxemons['vida']" >
+
+
+      <label >Tipo ID</label>
+      <input type="number"   formControlName="tipo_id"  [(ngModel)]="xuxemons['tipo_id']">
+
+      <label >Archivo</label>
+      <input type="text"   formControlName="archivo" [(ngModel)]="xuxemons['archivo']" >
+
+      <label >Descripción</label>
+      <textarea type="text"  formControlName="descripcion" [(ngModel)]="xuxemons['descripcion']" ></textarea>
+
+    <button type="submit" class="btn btn-primary" (click)="modXuxemon()" >Submit</button>
+  </form>
+
+</section>

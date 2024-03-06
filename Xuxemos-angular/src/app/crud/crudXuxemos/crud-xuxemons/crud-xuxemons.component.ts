@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Xuxemon} from "../../../models/xuxemon.model";
 import {XuxemonService} from "../../../services/xuxemonSer/xuxemon.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-crud-xuxemons',
@@ -16,7 +17,7 @@ export class CrudXuxemonsComponent implements OnInit {
   addXuxemonForm : FormGroup;
 
 
-  constructor( public xuxemonService: XuxemonService,private formBuilder: FormBuilder) { }
+  constructor( public xuxemonService: XuxemonService,private formBuilder: FormBuilder,private router: Router) { }
 
   ngOnInit(): void {
 
@@ -65,5 +66,14 @@ export class CrudXuxemonsComponent implements OnInit {
     });
 
   }
+
+  modXuxemon(xuxemon:Xuxemon){
+
+    this.router.navigate(['/modXuxemon'],
+      {queryParams:{id:xuxemon.id,nombre:xuxemon.nombre,vida:xuxemon.vida,tipo_id:xuxemon.tipo_id,archivo:'xuxemon.archivo',descripcion:xuxemon.descripcion,created_at:xuxemon.created_at,updated_at:xuxemon.updated_at}});
+
+  }
+
+
 
 }

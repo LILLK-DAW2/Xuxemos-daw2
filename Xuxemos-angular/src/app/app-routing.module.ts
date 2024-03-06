@@ -5,6 +5,7 @@ import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
 import {MenuComponent} from "./menu/menu.component";
 import {CrudXuxemonsComponent} from "./crud/crudXuxemos/crud-xuxemons/crud-xuxemons.component";
+import {ModXuxemonComponent} from "./crud/crudXuxemos/mod-xuxemon/mod-xuxemon.component";
 
 
 const routes : Routes=[
@@ -19,6 +20,9 @@ const routes : Routes=[
   },
   {
     path:'crudXuxemons',  component : CrudXuxemonsComponent,
+  },
+  {
+    path:'modXuxemon/:id/:nombre/:vida/:tipo_id/:archivo/:descripcion/:created_at/:updated_at',  component : ModXuxemonComponent,
   },
   {
     path:'register',  component : RegisterComponent,

@@ -15,6 +15,7 @@ import {RouterOutlet} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { CrudXuxemonsComponent } from './crud/crudXuxemos/crud-xuxemons/crud-xuxemons.component';
+import { ModXuxemonComponent } from './crud/crudXuxemos/mod-xuxemon/mod-xuxemon.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CrudXuxemonsComponent } from './crud/crudXuxemos/crud-xuxemons/crud-xux
     LoginComponent,
     RegisterComponent,
     MenuComponent,
-    CrudXuxemonsComponent
+    CrudXuxemonsComponent,
+    ModXuxemonComponent
   ],
     imports: [
         ReactiveFormsModule,

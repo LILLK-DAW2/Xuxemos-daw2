@@ -28,7 +28,7 @@
       <button type="button" class="btn btn-dark" (click)="destroyXuxemon(xuxemon.id)">Eliminar</button>
     </td>
     <td>
-      <button type="button" class="btn btn-dark">Modificar</button>
+      <button type="button" class="btn btn-dark" [routerLink]="['/modXuxemon', xuxemon.id, xuxemon.nombre,xuxemon.vida,xuxemon.tipo_id,xuxemon.archivo,xuxemon.descripcion,xuxemon.created_at,xuxemon.updated_at]" >Modificar</button>
     </td>
   </tr>
   </tbody>
@@ -60,4 +60,4 @@
 
 </section>
 
-<button (click)="importXuxemons()" >Puttaaa</button>
+
