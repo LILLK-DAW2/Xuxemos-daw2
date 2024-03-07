@@ -1,25 +1,26 @@
-<section class="container m-4">
+<section class="modXuxemon">
   <form [formGroup]="modXuxemonForm">
       <label >ID</label>
-      <input type="text"   formControlName="id"   [(ngModel)]="xuxemons['id']" readonly >
+      <input type="text"   formControlName="id"   [(ngModel)]="xuxemonMod.id" readonly >
 
       <label >Nombre</label>
-      <input type="text"   formControlName="nombre" [(ngModel)]="xuxemons['nombre']" >
+      <input type="text"   formControlName="nombre" [(ngModel)]="xuxemonMod.nombre" >
 
       <label >Vida</label>
-      <input type="number"   formControlName="vida" [(ngModel)]="xuxemons['vida']" >
+      <input type="number"   formControlName="vida" [(ngModel)]="xuxemonMod.vida" >
 
 
       <label >Tipo ID</label>
-      <input type="number"   formControlName="tipo_id"  [(ngModel)]="xuxemons['tipo_id']">
+      <input type="number"   formControlName="tipo_id"  [(ngModel)]="xuxemonMod.tipo_id">
 
       <label >Archivo</label>
-      <input type="text"   formControlName="archivo" [(ngModel)]="xuxemons['archivo']" >
+      <input type="text"   formControlName="archivo" [(ngModel)]="xuxemonMod.archivo" >
 
       <label >Descripción</label>
-      <textarea type="text"  formControlName="descripcion" [(ngModel)]="xuxemons['descripcion']" ></textarea>
+      <textarea type="text"  formControlName="descripcion" [value]="xuxemonMod.descripcion" ></textarea>
 
     <button type="submit" class="btn btn-primary" (click)="modXuxemon()" >Submit</button>
+    <button routerLink="/.."> Atras</button>
   </form>
 
 </section>

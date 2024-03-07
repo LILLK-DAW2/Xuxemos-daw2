@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
                     ObjetosSeeder::class,
                     XuxemonSeeder::class,
                     MochilaSeeder::class,
-                    InventarioXuxemonsSeeder::class
+                    //InventarioXuxemonsSeeder::class
         ]);
     }
 }

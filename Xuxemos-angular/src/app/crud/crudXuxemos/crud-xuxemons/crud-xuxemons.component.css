@@ -1,0 +1,43 @@
+/* Estilos para el contenedor de la tabla */
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos para las tablas */
+.table_crud {
+  width: auto; /* Ajustar al tamaño del contenido */
+  margin: 0 10px; /* Añadir margen entre las tablas */
+  border-collapse: collapse;
+}
+
+.thead_crud {
+  background-color: #f2ccfd; /* Fondo rosa claro */
+}
+
+.thead_crud th {
+  color: #8e44ad; /* Color de texto */
+  font-size: 18px;
+  padding: 10px;
+}
+
+.tbody_crud td {
+  border: 2px solid #8e44ad; /* Borde */
+  padding: 10px;
+}
+
+/* Estilos para botones */
+.btn {
+  background-color: #8e44ad;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #570063;
+}

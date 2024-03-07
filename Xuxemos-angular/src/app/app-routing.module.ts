@@ -20,10 +20,11 @@ const routes : Routes=[
   },
   {
     path:'crudXuxemons',  component : CrudXuxemonsComponent,
-  },
-  {
-    path:'modXuxemon/:id/:nombre/:vida/:tipo_id/:archivo/:descripcion/:created_at/:updated_at',  component : ModXuxemonComponent,
-  },
+
+
+  }, {path:'modXuxemon/:id',  component : ModXuxemonComponent,
+    },
+
   {
     path:'register',  component : RegisterComponent,
   }, {

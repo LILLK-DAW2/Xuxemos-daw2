@@ -1,38 +1,37 @@
-<table class="table">
-  <thead class="thead-dark">
-  <tr>
-    <th scope="col">ID</th>
-    <th scope="col">Nombre</th>
-    <th scope="col">Vida</th>
-    <th scope="col">Tipo</th>
-    <th scope="col">Archivo</th>
-    <th scope="col">Descripcion</th>
-    <th scope="col">Created_at</th>
-    <th scope="col">Updated_at</th>
-    <th scope="col">Eliminar</th>
-    <th scope="col">Modificar</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor=" let xuxemon of xuxemons">
-    <th scope="row">{{xuxemon.id}}</th>
-    <td>{{xuxemon.nombre}}</td>
-    <td>{{xuxemon.vida}}</td>
-    <td>{{xuxemon.tipo_id}}</td>
-    <td>{{xuxemon.archivo}}</td>
-    <td>{{xuxemon.descripcion}}</td>
-    <td>{{xuxemon.created_at}}</td>
-    <td>{{xuxemon.updated_at}}</td>
+<section class="table-container">
+  <table class="table_crud">
+    <thead class="thead_crud">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Vida</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Archivo</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Eliminar</th>
+      <th scope="col">Modificar</th>
+    </tr>
+    </thead>
+    <tbody class="tbody_crud">
+    <tr *ngFor=" let xuxemon of xuxemons">
+      <th scope="row">{{xuxemon.id}}</th>
+      <td>{{xuxemon.nombre}}</td>
+      <td>{{xuxemon.vida}}</td>
+      <td>{{xuxemon.tipo_id}}</td>
+      <td>{{xuxemon.archivo}}</td>
+      <td>{{xuxemon.descripcion}}</td>
 
-    <td>
-      <button type="button" class="btn btn-dark" (click)="destroyXuxemon(xuxemon.id)">Eliminar</button>
-    </td>
-    <td>
-      <button type="button" class="btn btn-dark" [routerLink]="['/modXuxemon', xuxemon.id, xuxemon.nombre,xuxemon.vida,xuxemon.tipo_id,xuxemon.archivo,xuxemon.descripcion,xuxemon.created_at,xuxemon.updated_at]" >Modificar</button>
-    </td>
-  </tr>
-  </tbody>
-</table>
+      <td>
+        <button type="button" class="btn btn-dark" (click)="destroyXuxemon(xuxemon.id)">Eliminar</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-dark" [routerLink]="['/modXuxemon', xuxemon.id]" >Modificar</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
 <section class="container m-4">
   <form [formGroup]="addXuxemonForm">
     <div class="form-group">

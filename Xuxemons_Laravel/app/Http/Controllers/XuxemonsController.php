@@ -37,11 +37,13 @@ class XuxemonsController extends Controller
         $xuxemon->delete();
         return response()->json('xuxemon elimninado con exito',200);
     }
-    public function edit($id)
+    public function findXuxemon(Request $request)
     {
-        $xuxemon = Xuxemon::findOrFail($id);
-        return response()->json('editado',200);
+        $idXuxemon = $request->input('id');
+        $xuxemon = Xuxemon::findOrFail($idXuxemon);
+        return response()->json($xuxemon,200);
     }
+
 
     public function update(Request $request)
     {

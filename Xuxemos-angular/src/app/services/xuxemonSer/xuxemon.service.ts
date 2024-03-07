@@ -10,7 +10,7 @@ export class XuxemonService {
 
   constructor(private http: HttpClient) { }
 
-  
+
 
   //usar data
   index(): Observable<any> {
@@ -26,7 +26,7 @@ export class XuxemonService {
   }
   addXuxemon(nombre: string, vida:number, tipo_id:number,archivo: string,descripcion:string): Observable<any> {
 
-    const data={
+    const data ={
       nombre,vida,tipo_id,archivo,descripcion
     }
 
@@ -40,7 +40,18 @@ export class XuxemonService {
       id, nombre,vida,tipo_id,archivo,descripcion
     }
 
-    return this.http.post('http://127.0.0.1:8000/xuxemonsUpdate', data);
+    return this.http.post('http://127.0.0.1:8000/xuxemonsUpdate',
+      data);
 
+  }
+  findXuxemon(id:number){
+
+
+
+    const data ={
+      id
+    }
+    return this.http.post('http://127.0.0.1:8000/xuxemonFind',
+      data);
   }
 }

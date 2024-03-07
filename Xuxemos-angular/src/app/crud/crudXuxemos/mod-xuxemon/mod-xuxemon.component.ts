@@ -11,7 +11,9 @@ import {ActivatedRoute, Params, Router} from "@angular/router";
 })
 export class ModXuxemonComponent implements OnInit {
 
-  xuxemons :Params;
+  idxuxemon :Params;
+
+  xuxemonMod : Xuxemon;
 
 
   modXuxemonForm : FormGroup;
@@ -21,6 +23,19 @@ export class ModXuxemonComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+
+    this.idxuxemon = this.rutaActiva.snapshot.params;
+    console.log(this.idxuxemon)
+    this.xuxemonMod = new class implements Xuxemon {
+      archivo: string;
+      descripcion: string;
+      id: number;
+      nombre: string;
+      tipo_id: number;
+      vida: number;
+    }
+    this.viewXuxemon();
 
 
     this.modXuxemonForm = this.formBuilder.group(
@@ -34,9 +49,23 @@ export class ModXuxemonComponent implements OnInit {
       }
     );
 
-    this.xuxemons = this.rutaActiva.snapshot.params;
 
-    console.log(this.xuxemons)
+
+  }
+  viewXuxemon(){
+
+
+    this.xuxemonService.findXuxemon(this.idxuxemon['id']).subscribe({
+      next: value =>{
+        this.xuxemonMod.id =value['id']
+        this.xuxemonMod.nombre =value['nombre']
+        this.xuxemonMod.vida =value['vida']
+        this.xuxemonMod.tipo_id =value['tipo_id']
+        this.xuxemonMod.archivo =value['archivo']
+        this.xuxemonMod.descripcion =value['descripcion']
+      },
+      error: err => alert(err)
+    });
 
   }
 

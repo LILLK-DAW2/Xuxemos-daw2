@@ -27,6 +27,7 @@ Route::middleware('cors')->group(function (){
     Route::post('xuxemonsCreate',[XuxemonsController::class,'store']);
     Route::delete('xuxemonsDelete',[XuxemonsController::class,'destroy']);
     Route::post('xuxemonsUpdate',[XuxemonsController::class,'update']);
+    Route::post('xuxemonFind',[XuxemonsController::class,'findXuxemon']);
 
 });
 

@@ -1,0 +1,106 @@
+.modXuxemon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.modXuxemon form {
+  background-color: #f2ccfd; /* Fondo rosa claro */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border: 4px solid #ff04c9; /* Borde naranja */
+}
+
+.modXuxemon form label {
+  color: #8e44ad;
+  font-size: 18px;
+  border-color: #570063;
+}
+
+.modXuxemon form input[type="text"],
+.modXuxemon form input[type="number"],
+.modXuxemon form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #8e44ad;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border-color: #570063;
+}
+
+.modXuxemon form input[type="submit"] {
+  width: calc(100% - 20px);
+  background-color: #8e44ad;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modXuxemon form input[type="submit"]:hover {
+  background-color: #6c3483;
+}
+
+.modXuxemon form input[type="text"]:focus,
+.modXuxemon form input[type="number"]:focus,
+.modXuxemon form textarea:focus {
+  border-color: #570063;
+}
+
+.modXuxemon form hr {
+  border-color: #570063;
+  border: 0;
+  height: 2px;
+  background-color: #6c3483;
+  margin: 30px 50px;
+}
+.modXuxemon form th {
+  border-color: #570063;
+  border: 0;
+  height: 2px;
+  background-color: #6c3483;
+  margin: 30px 50px;
+}
+
+.modXuxemon form button[type="submit"] {
+  display: block;
+  background-color: #8e44ad;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.modXuxemon form button[type="submit"]:hover {
+  background-color: #570063;
+}
+.modXuxemon form button {
+  display: block;
+  background-color: #8e44ad;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.modXuxemon form button:hover {
+  background-color: #570063;
+}
+

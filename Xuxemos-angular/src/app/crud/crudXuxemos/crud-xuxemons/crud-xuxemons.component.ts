@@ -40,7 +40,6 @@ export class CrudXuxemonsComponent implements OnInit {
       error: err => alert(err)
     });
 
-    console.log(this.xuxemons)
 
   }
   destroyXuxemon( id:number){
@@ -67,12 +66,6 @@ export class CrudXuxemonsComponent implements OnInit {
 
   }
 
-  modXuxemon(xuxemon:Xuxemon){
-
-    this.router.navigate(['/modXuxemon'],
-      {queryParams:{id:xuxemon.id,nombre:xuxemon.nombre,vida:xuxemon.vida,tipo_id:xuxemon.tipo_id,archivo:'xuxemon.archivo',descripcion:xuxemon.descripcion,created_at:xuxemon.created_at,updated_at:xuxemon.updated_at}});
-
-  }
 
 
 

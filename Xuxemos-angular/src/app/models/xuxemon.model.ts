@@ -5,6 +5,4 @@ export interface Xuxemon {
   tipo_id: number
   archivo: string;
   descripcion: string;
-  created_at: Date;
-  updated_at: Date;
 }
