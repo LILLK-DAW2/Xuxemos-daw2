@@ -16,7 +16,9 @@ return new class extends Migration
             $table->unsignedBigInteger('xuxemon_id');
             $table->unsignedBigInteger('user_id');
             $table->integer('vida')->nullable()->default(0);
-            $table->integer('xuxes')->nullable()->default(0);
+            $table->integer('ataque')->nullable()->default(0);
+            $table->integer('defensa')->nullable()->default(0);
+            $table->integer('caramelos')->nullable()->default(0);
             $table->string('tamaño')->nullable()->default("pequeño");
 
 

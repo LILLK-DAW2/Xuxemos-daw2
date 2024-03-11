@@ -19,7 +19,9 @@ class InventarioXuxemonsSeeder extends Seeder
                     'user_id' => $userId,
                     'xuxemon_id' => $xuxemonId,
                     'vida' => rand(50, 100),
-                    'xuxes' => rand(1, 10),
+                    'ataque'=> rand(50,100),
+                    'defensa'=>rand(50,100),
+                    'caramelos' => rand(1, 10),
                     'tamaño' => ['pequeño', 'mediano', 'grande'][rand(0, 2)],
                 ]);
 

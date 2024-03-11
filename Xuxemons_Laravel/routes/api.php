@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InventarioXuxemonsController;
 use App\Http\Controllers\Log\LogAuth;
 use App\Http\Controllers\Log\RegisterAuth;
 use App\Http\Controllers\xuxemonsController;
@@ -30,5 +31,8 @@ Route::middleware('cors')->group(function (){
     Route::delete('xuxemonsDelete',[XuxemonsController::class,'destroy']);
     Route::post('xuxemonsUpdate',[XuxemonsController::class,'update']);
     Route::post('xuxemonFind',[XuxemonsController::class,'findXuxemon']);
+
+    Route::get('inventarioXuxemonsIndex',[InventarioXuxemonsController::class ,'index']);
+    Route::post('inventarioXuxemonsCreate',[InventarioXuxemonsController::class,'store']);
 
 });
