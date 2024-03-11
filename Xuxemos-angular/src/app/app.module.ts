@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -16,6 +15,7 @@ import { ObjetosComponent } from './objetos/objetos.component';
 import { InventarioComponent } from './inventario/inventario.component';
 import { XuxedexComponent } from './xuxedex/xuxedex.component';
 import { TarjetaColeccionComponent } from './coleccion/tarjeta-coleccion/tarjeta-coleccion.component';
+import { AppRoutingModule } from './app-routing.module'; 
 
 
 @NgModule({
@@ -28,7 +28,8 @@ import { TarjetaColeccionComponent } from './coleccion/tarjeta-coleccion/tarjeta
     ObjetosComponent,
     InventarioComponent,
     XuxedexComponent,
-    TarjetaColeccionComponent
+    TarjetaColeccionComponent,
+    
   ],
   imports: [
     ReactiveFormsModule,
@@ -37,9 +38,12 @@ import { TarjetaColeccionComponent } from './coleccion/tarjeta-coleccion/tarjeta
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule, 
+    AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }
