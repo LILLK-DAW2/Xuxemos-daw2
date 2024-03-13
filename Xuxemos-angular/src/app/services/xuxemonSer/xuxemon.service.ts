@@ -54,4 +54,13 @@ export class XuxemonService {
     return this.http.post('http://127.0.0.1:8000/xuxemonFind',
       data);
   }
+  debug(id:number){
+
+    const data ={
+      id
+    }
+    return this.http.post('http://127.0.0.1:8000/xuxemonDebug',
+      data);
+  }
 }
+
