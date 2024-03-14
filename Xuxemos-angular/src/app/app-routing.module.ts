@@ -7,6 +7,7 @@ import {MenuComponent} from "./menu/menu.component";
 import {CrudXuxemonsComponent} from "./crud/crudXuxemos/crud-xuxemons/crud-xuxemons.component";
 import {ModXuxemonComponent} from "./crud/crudXuxemos/mod-xuxemon/mod-xuxemon.component";
 import {InventarioComponent} from "./inventario/inventario.component";
+import {ColeccionComponent} from "./coleccion/coleccion.component";
 
 
 const routes : Routes=[
@@ -24,7 +25,7 @@ const routes : Routes=[
 
 
   },{
-    path:'inventarioXuxemons',  component : InventarioComponent,
+    path:'coleccionXuxemons',  component : ColeccionComponent,
 
 
   }, {path:'modXuxemon/:id',  component : ModXuxemonComponent,

@@ -35,5 +35,7 @@ Route::middleware('cors')->group(function (){
     Route::get('inventarioXuxemonsIndex',[InventarioXuxemonsController::class ,'index']);
     Route::post('inventarioXuxemonsCreate',[InventarioXuxemonsController::class,'store']);
     Route::post('inventarioDebug',[InventarioXuxemonsController::class,'debug']);
+    Route::get('xuxemonsUserIndex',[InventarioXuxemonsController::class ,'indexXuxemonsUsu']);
+
 
 });

@@ -8,6 +8,7 @@ use Exception;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Auth;
 use Nette\Schema\ValidationException;
 class InventarioXuxemonsController extends Controller{
      public function index(){
@@ -15,8 +16,18 @@ class InventarioXuxemonsController extends Controller{
     return response()->json($xuxemons,200);
 
     }
+    public function indexXuxemonsUsu(Request $request)
+    {
 
-    public function store(Request $request){
+        try {
+            $xuxemons = InventarioXuxemons::where('user_id',$request['user_id'])->get();
+            return response()->json($xuxemons, 200);
+        }catch (ValidationException|QueryException|Exception $e){
+            return response()->json( ['error'=>$e]);
+        }
+
+    }
+        public function store(Request $request){
 
 
         try {
