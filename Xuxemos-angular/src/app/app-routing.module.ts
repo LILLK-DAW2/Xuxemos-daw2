@@ -10,13 +10,13 @@ import {ModXuxemonComponent} from "./crud/crudXuxemos/mod-xuxemon/mod-xuxemon.co
 
 const routes : Routes=[
   {
-    path:'welcome',  component : CrudXuxemonsComponent,
+    path:'welcome',  component : LoginComponent,
   },
   {
     path:'login',  component : LoginComponent,
   },
   {
-    path:'menu',  component : MenuComponent,
+    path:'menu/:id',  component : MenuComponent,
   },
   {
     path:'crudXuxemons',  component : CrudXuxemonsComponent,

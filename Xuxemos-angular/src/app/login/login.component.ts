@@ -37,8 +37,8 @@ export class LoginComponent implements OnInit {
     const password = this.loginForm.value.password;
 
 
-    const token = this.userService.login(nombre_u, password).subscribe({
-      next: value => this.router.navigate(['/menu']),
+     this.userService.login(nombre_u, password).subscribe({
+      next: value =>this.router.navigate(['/menu',value['user_id']]) ,
       error: err => alert(err)
     });
     //console.log(token);

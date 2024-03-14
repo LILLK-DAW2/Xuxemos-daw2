@@ -36,5 +36,4 @@ Route::middleware('cors')->group(function (){
     Route::post('inventarioXuxemonsCreate',[InventarioXuxemonsController::class,'store']);
     Route::post('inventarioDebug',[InventarioXuxemonsController::class,'debug']);
 
-
 });

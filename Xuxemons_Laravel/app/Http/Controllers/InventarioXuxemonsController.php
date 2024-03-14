@@ -46,13 +46,15 @@ class InventarioXuxemonsController extends Controller{
         try {
 
             $tamaos=['pequeño','mediano','grande'];
-            $xuxemons = Xuxemon::all();
+
             $user_id = $request['user_id'];
 
             for ($i = 1; $i <= 10; $i++) {
+
+                $xuxemons = Xuxemon::inRandomOrder()->first();
                 $request->merge([
                     'user_id'=> $user_id,
-                    'xuxemon_id'=> rand(1,count($xuxemons)),
+                    'xuxemon_id'=> $xuxemons['id'] ,
                     'vida'=>rand(50,10),
                     'ataque' =>rand(50,100),
                     'defensa'=>rand(50,100),

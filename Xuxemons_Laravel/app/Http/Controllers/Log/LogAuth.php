@@ -30,7 +30,8 @@ class LogAuth extends Controller
             $user->save();
 
             return response()->json([
-                'token'=>$token
+                'token'=>$token,
+                'user_id'=>$user['id']
             ],200);
         }
         return 'Credenciales no válidas. Por favor, inténtalo de nuevo.';
