@@ -29,13 +29,13 @@ import { TarjetaColeccionComponent } from './coleccion/tarjeta-coleccion/tarjeta
     RegisterComponent,
     MenuComponent,
     CrudXuxemonsComponent,
-    ModXuxemonComponent
+    ModXuxemonComponent,
     ColeccionComponent,
     ObjetosComponent,
     InventarioComponent,
     XuxedexComponent,
     TarjetaColeccionComponent,
-    
+
   ],
   imports: [
     ReactiveFormsModule,
@@ -44,24 +44,15 @@ import { TarjetaColeccionComponent } from './coleccion/tarjeta-coleccion/tarjeta
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatCardModule, 
-    AppRoutingModule
+    MatCardModule,
+    AppRoutingModule,
+    RouterOutlet,
+    HttpClientModule,
 
   ],
-    imports: [
-        ReactiveFormsModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        MatCardModule,
-        RouterOutlet,
-        HttpClientModule,
-        AppRoutingModule,
-    ],
+
   providers: [],
   bootstrap: [AppComponent]
-  
+
 })
 export class AppModule { }
