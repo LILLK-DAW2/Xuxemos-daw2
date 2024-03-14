@@ -22,5 +22,21 @@ class UserSeeder extends Seeder
             'password'=>Hash::make('12345'),
             'created_at'=>now(),
         ]);
+        DB::table('users')->insert([
+            'nombre_u'=>'dacaho1',
+            'nombre'=>'David2',
+            'apellidos'=>'Hola',
+            'email'=>'dacaho2002@gmail.com',
+            'password'=>Hash::make('12345'),
+            'created_at'=>now(),
+        ]);
+        DB::table('users')->insert([
+            'nombre_u'=>'dacaho2',
+            'nombre'=>'David',
+            'apellidos'=>'Hola',
+            'email'=>'dacaho2003@gmail.com',
+            'password'=>Hash::make('12345'),
+            'created_at'=>now(),
+        ]);
     }
 }

@@ -20,15 +20,18 @@ class InventarioXuxemonsController extends Controller{
     {
 
         try {
-            $xuxemons = InventarioXuxemons::where('user_id',$request['user_id'])->get();
+            $xuxemons = InventarioXuxemons::select(['inventarioxuxemons.*','xuxemons.nombre as nombreXuxemon','xuxemons.archivo as archivo','tipos.nombre as tipo'])
+                                                    ->join('xuxemons','xuxemons.id','=','inventarioxuxemons.xuxemon_id')
+                                                    ->join('tipos','tipos.id','=','xuxemons.tipo_id')
+                                                    ->where('user_id', 'like','%'.$request['user_id'].'%')->get();
             return response()->json($xuxemons, 200);
         }catch (ValidationException|QueryException|Exception $e){
             return response()->json( ['error'=>$e]);
         }
 
     }
-        public function store(Request $request){
 
+    public function store(Request $request){
 
         try {
             $request->validate([
@@ -50,9 +53,8 @@ class InventarioXuxemonsController extends Controller{
 
 
     }
+    
     public function debug(Request $request){
-
-
 
         try {
 
