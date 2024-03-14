@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
+import {XuxemonUser} from "../../models/xuxemonUser.model";
 
 @Component({
   selector: 'app-tarjeta-coleccion',
@@ -7,11 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./tarjeta-coleccion.component.css']
 })
 export class TarjetaColeccionComponent implements OnInit {
+  @Input() xuxemon: XuxemonUser;
 
   constructor(private router: Router) {}
   ngOnInit(): void {
   }
 
- 
+
 
 }
