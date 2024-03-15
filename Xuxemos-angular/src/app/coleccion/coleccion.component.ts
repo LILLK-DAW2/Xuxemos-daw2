@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Xuxemon} from "../models/xuxemon.model";
 import {UserService} from "../services/userSer/user.service";
 import {XuxemonUser} from "../models/xuxemonUser.model";
 

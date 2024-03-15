@@ -1,10 +1,10 @@
 .fondo {
   background-color: rgb(33, 14, 56);
   width: 100%;
-  height: fit-content; /* Ajusta la altura al 100% de la ventana */
+  height: calc(100% - 100px); /* Ajusta la altura al 100% de la ventana */
 
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Establece 4 columnas */
+  grid-template-columns: repeat(7, 1fr); /* Establece 4 columnas */
   gap: 20px;
   grid-auto-flow: row; /* Cambia el flujo a filas */
 }

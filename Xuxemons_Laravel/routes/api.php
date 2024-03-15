@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChuchesUserController;
 use App\Http\Controllers\InventarioXuxemonsController;
 use App\Http\Controllers\Log\LogAuth;
 use App\Http\Controllers\Log\RegisterAuth;
@@ -36,6 +37,9 @@ Route::middleware('cors')->group(function (){
     Route::post('inventarioXuxemonsCreate',[InventarioXuxemonsController::class,'store']);
     Route::post('inventarioDebug',[InventarioXuxemonsController::class,'debug']);
     Route::get('xuxemonsUserIndex',[InventarioXuxemonsController::class ,'indexXuxemonsUsu']);
+
+    Route::post('chuchesUserDebug',[ChuchesUserController::class,'debug']);
+    Route::get('chuchesUserIndex',[ChuchesUserController::class ,'indexChuchesUsu']);
 
 
 });

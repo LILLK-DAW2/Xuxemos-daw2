@@ -9,6 +9,7 @@ import {FormBuilder} from "@angular/forms";
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+
   idUsuario :Params;
   constructor(public xuxemonService: XuxemonService,private router: Router,private rutaActiva: ActivatedRoute) { }
 

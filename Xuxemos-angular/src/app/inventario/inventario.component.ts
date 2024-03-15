@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ChuchesUser} from "../models/chuchesUser.model";
+import {UserService} from "../services/userSer/user.service";
 
 @Component({
   selector: 'app-inventario',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InventarioComponent implements OnInit {
 
-  constructor() { }
+
+
+  chuchesUsuario: ChuchesUser[]=[];
+  constructor(public userService: UserService) { }
 
   ngOnInit(): void {
+    this.indexChuches();
   }
+  indexChuches(){
 
+    this.userService.getChuches(1).subscribe({
+      next: value => this.chuchesUsuario=value ,
+      error: err => alert(err)
+    });
+
+  }
 }

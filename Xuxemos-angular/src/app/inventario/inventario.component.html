@@ -1,21 +1,18 @@
 <div class="navbar">
+  <a [routerLink]="['/menu',chuchesUsuario[0].user_id]" >Atras</a>
   <h1>XUXEMNOS</h1>
   <div class="nav-item">
     <p>100</p>
     <img src="..\assets\imaganes\coin.png" alt="Icon">
   </div>
+
 </div>
 
 
 <div class="fondo">
 
-  <app-objeto-inventario></app-objeto-inventario>
-  <app-objeto-inventario></app-objeto-inventario>
-  <app-objeto-inventario></app-objeto-inventario>
-  <app-objeto-inventario></app-objeto-inventario>
-  <app-objeto-inventario></app-objeto-inventario>
-  <app-objeto-inventario></app-objeto-inventario>
-  <app-objeto-inventario></app-objeto-inventario>
-  <app-objeto-inventario></app-objeto-inventario>
-  <app-objeto-inventario></app-objeto-inventario>
+  <div *ngFor="let chuches of chuchesUsuario; index as i">
+
+        <app-chuche-inventario [chuche]="chuches"></app-chuche-inventario>
+  </div>
 </div>

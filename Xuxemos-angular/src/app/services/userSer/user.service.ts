@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {XuxemonUser} from "../../models/xuxemonUser.model";
+import {ChuchesUser} from "../../models/chuchesUser.model";
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,14 @@ export class UserService {
     const url = `http://127.0.0.1:8000/xuxemonsUserIndex${queryParams}`;
 
     return this.http.get<XuxemonUser[]>(url);
+
+  }
+  getChuches(user_id:number):Observable<ChuchesUser[]>{
+
+    const queryParams = `?user_id=${user_id}`;
+    const url = `http://127.0.0.1:8000/chuchesUserIndex${queryParams}`;
+
+    return this.http.get<ChuchesUser[]>(url);
 
   }
 }
