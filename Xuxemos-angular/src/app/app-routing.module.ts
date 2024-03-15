@@ -28,6 +28,10 @@ const routes : Routes=[
     path:'coleccionXuxemons',  component : ColeccionComponent,
 
 
+  },{
+    path:'inventarioUsuario',  component : InventarioComponent,
+
+
   }, {path:'modXuxemon/:id',  component : ModXuxemonComponent,
     },
 

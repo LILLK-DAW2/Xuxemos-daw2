@@ -40,7 +40,7 @@ class InventarioXuxemonsController extends Controller{
                 'vida'=>'required|integer',
                 'ataque' =>'required|integer',
                 'defensa'=>'required|integer',
-                'tamaño'=>'required|string',
+                'tamano'=>'required|string',
                 'caramelos'=>'required|integer'
             ]);
 
@@ -53,7 +53,7 @@ class InventarioXuxemonsController extends Controller{
 
 
     }
-    
+
     public function debug(Request $request){
 
         try {
@@ -71,7 +71,7 @@ class InventarioXuxemonsController extends Controller{
                     'vida'=>rand(50,10),
                     'ataque' =>rand(50,100),
                     'defensa'=>rand(50,100),
-                    'tamaño'=>$tamaos[rand(0,2)],
+                    'tamano'=>$tamaos[rand(0,2)],
                     'caramelos'=>0
                 ]);
 
@@ -82,7 +82,7 @@ class InventarioXuxemonsController extends Controller{
                     'vida'=>'required|integer',
                     'ataque' =>'required|integer',
                     'defensa'=>'required|integer',
-                    'tamaño'=>'required|string',
+                    'tamano'=>'required|string',
                     'caramelos'=>'required|integer'
                 ]);
 

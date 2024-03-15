@@ -20,6 +20,7 @@ import { ObjetosComponent } from './objetos/objetos.component';
 import { InventarioComponent } from './inventario/inventario.component';
 import { XuxedexComponent } from './xuxedex/xuxedex.component';
 import { TarjetaColeccionComponent } from './coleccion/tarjeta-coleccion/tarjeta-coleccion.component';
+import { ObjetoInventarioComponent } from './inventario/objeto-inventario/objeto-inventario.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { TarjetaColeccionComponent } from './coleccion/tarjeta-coleccion/tarjeta
     InventarioComponent,
     XuxedexComponent,
     TarjetaColeccionComponent,
+    ObjetoInventarioComponent,
 
   ],
   imports: [

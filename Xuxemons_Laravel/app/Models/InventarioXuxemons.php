@@ -10,7 +10,7 @@ class InventarioXuxemons extends Model
     use HasFactory;
     protected $table = 'InventarioXuxemons';
 
-    protected $fillable = ['user_id', 'xuxemon_id', 'vida','ataque', 'defensa','tamaño','caramenlos',];
+    protected $fillable = ['user_id', 'xuxemon_id', 'vida','ataque', 'defensa','tamano','caramenlos',];
 
     public function usuario()
     {

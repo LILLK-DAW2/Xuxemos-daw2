@@ -6,7 +6,10 @@
   </div>
 </div>
 
+
+
 <div class="fondo">
+  <a [routerLink]="['/menu',xuxemonsUsuario[0].user_id]" >Atras</a>
   <div *ngFor="let xuxemon of xuxemonsUsuario; index as i">
     <app-tarjeta-coleccion [xuxemon]="xuxemon"></app-tarjeta-coleccion>
   </div>

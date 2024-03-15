@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('ataque')->nullable()->default(0);
             $table->integer('defensa')->nullable()->default(0);
             $table->integer('caramelos')->nullable()->default(0);
-            $table->string('tamaño')->nullable()->default("pequeño");
+            $table->string('tamano')->nullable()->default("pequeño");
 
 
 

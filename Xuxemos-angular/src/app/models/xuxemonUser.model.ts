@@ -6,7 +6,7 @@ export interface XuxemonUser {
   defensa: number;
   id: number;
   nombreXuxemon: string;
-  tamaño: string;
+  tamano: string;
   tipo: string;
   updated_at: string;
   user_id: number;
