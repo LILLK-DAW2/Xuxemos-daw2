@@ -1,12 +1,12 @@
 <div class="container" >
-        
+
     <div class="xuxemon">
         <h1>Pequeño</h1>
 
         <progress id="file" value="62" max="100"> 32% </progress>
-        <img src="../assets/imaganes/apleki.png" alt="" >
-        <p>nombre</p>
-        <p>tipo</p>
+        <img src="../assets/imaganes/{{ xuxemon.archivo }}" alt="" >
+        <p>{{ xuxemon.nombreXuxemon }}</p>
+        <p>{{ xuxemon.tipo }}</p>
 
         <select id="acciones" class="acciones">
             <option value="0" disabled selected>Acciones</option>
@@ -15,8 +15,8 @@
             <option value="3">Matar</option>
             <option value="4">Vener</option>
         </select>
-        
-        
-      
+
+
+
       </div>
     </div>

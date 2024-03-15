@@ -1,13 +1,15 @@
 export interface XuxemonUser {
+  archivo: string;
+  ataque: number;
+  caramelos: number;
+  created_at: string;
+  defensa: number;
   id: number;
-  xuxemon_id: number;
+  nombreXuxemon: string;
+  tamaño: string;
+  tipo: string;
+  updated_at: string;
   user_id: number;
   vida: number;
-  ataque: number;
-  defensa: number;
-  caramelos: number;
-  tamaño: string;
-  nombreXuxemon: string;
-  archivo: string;
-  tipo: string;
+  xuxemon_id: number;
 }

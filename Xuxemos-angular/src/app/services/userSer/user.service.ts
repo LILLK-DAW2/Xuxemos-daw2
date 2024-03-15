@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {XuxemonUser} from "../../models/xuxemonUser.model";
 
 @Injectable({
   providedIn: 'root'
@@ -25,14 +26,12 @@ export class UserService {
 
     return this.http.post('http://127.0.0.1:8000/register?nombre_u=' + nombre_u + '&nombre=' + nombre + '&apellidos=' + apellidos + '&telefono=' + telefono + '&email=' + email + '&password=' + password, {});
   }
-  getXuxemons(user_id:number){
+  getXuxemons(user_id:number):Observable<XuxemonUser[]>{
 
-    const data ={
-      user_id
-    }
-    console.log(data)
-    return this.http.post('http://127.0.0.1:8000/xuxemonsUserIndex',
-      data);
+    const queryParams = `?user_id=${user_id}`;
+    const url = `http://127.0.0.1:8000/xuxemonsUserIndex${queryParams}`;
+
+    return this.http.get<XuxemonUser[]>(url);
 
   }
 }

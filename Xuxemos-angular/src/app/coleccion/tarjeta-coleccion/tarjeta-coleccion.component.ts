@@ -8,6 +8,7 @@ import {XuxemonUser} from "../../models/xuxemonUser.model";
   styleUrls: ['./tarjeta-coleccion.component.css']
 })
 export class TarjetaColeccionComponent implements OnInit {
+
   @Input() xuxemon: XuxemonUser;
 
   constructor(private router: Router) {}

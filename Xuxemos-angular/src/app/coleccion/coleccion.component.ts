@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Xuxemon} from "../models/xuxemon.model";
 import {UserService} from "../services/userSer/user.service";
+import {XuxemonUser} from "../models/xuxemonUser.model";
 
 @Component({
   selector: 'app-coleccion',
@@ -9,7 +10,7 @@ import {UserService} from "../services/userSer/user.service";
 })
 export class ColeccionComponent implements OnInit {
 
-  xuxemonsUsuario : Xuxemon[];
+  xuxemonsUsuario: XuxemonUser[] =[];
 
   constructor(public userService: UserService) { }
 
@@ -20,7 +21,7 @@ export class ColeccionComponent implements OnInit {
   indexXuxemons(){
 
     this.userService.getXuxemons(1).subscribe({
-      next: value =>console.log(value) ,
+      next: value => this.xuxemonsUsuario=value ,
       error: err => alert(err)
     });
 
