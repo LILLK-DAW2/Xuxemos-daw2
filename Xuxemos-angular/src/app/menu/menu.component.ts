@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {XuxemonService} from "../services/xuxemonSer/xuxemon.service";
 import {FormBuilder} from "@angular/forms";
+import {ChuchesService} from "../services/chuchesSer/chuches.service";
 
 @Component({
   selector: 'app-menu',
@@ -11,15 +12,23 @@ import {FormBuilder} from "@angular/forms";
 export class MenuComponent implements OnInit {
 
   idUsuario :Params;
-  constructor(public xuxemonService: XuxemonService,private router: Router,private rutaActiva: ActivatedRoute) { }
+  constructor(public xuxemonService: XuxemonService,private router: Router,private rutaActiva: ActivatedRoute, private chuchesSevice: ChuchesService) { }
 
   ngOnInit(): void {
     this.idUsuario = this.rutaActiva.snapshot.params;
   }
 
-  debug(){
+  debugXuxemons(){
     const idUsuario = parseInt(this.idUsuario['id'])
-    this.xuxemonService.debug(idUsuario).subscribe({
+    this.xuxemonService.debugXuxemons(idUsuario).subscribe({
+      next: value => console.log(value),
+      error: err => alert(err)
+    });
+
+  }
+  debugChuches(){
+    const idUsuario = parseInt(this.idUsuario['id'])
+    this.chuchesSevice.debugChuces(idUsuario).subscribe({
       next: value => console.log(value),
       error: err => alert(err)
     });
