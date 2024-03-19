@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ChuchesUser;
+use App\Models\ConfigLvlXuxemons;
 use App\Models\InventarioXuxemons;
 use App\Models\Xuxemon;
 use Exception;
@@ -94,6 +96,51 @@ class InventarioXuxemonsController extends Controller{
         }catch (ValidationException|QueryException|Exception $e){
             return response()->json( ['error'=>$e]);
         }
+
+
+    }
+
+    protected function alimentarXuxemon(Request $request){
+
+         $config = ConfigLvlXuxemons::all()->first();
+
+         $xuxemon = InventarioXuxemons::where('id',$request['id'])->first();
+
+         $chuche = ChuchesUser::where('id',$request['id'])->first();
+
+         try{
+
+             if($chuche['cantidad']>0){
+                 $xuxemon['caramelos']++;
+                 $chuche['cantidad']--;
+                 if($xuxemon['tamano'] == 'pequeño'){
+                     if($xuxemon['caramelos']>=$config['peq-med']){
+                        $xuxemon['tamano'] = 'mediano';
+                        $xuxemon['caramelos']-$config['peq-med'];
+                     }
+                 }elseif($xuxemon['tamano'] == 'mediano'){
+                     if($xuxemon['caramelos']>=$config['med-gra']){
+                         $xuxemon['tamano'] = 'grande';
+                         $xuxemon['caramelos']-$config['med-gra'];
+                     }
+                 }
+
+                 $xuxemon->save();
+                 $chuche->save();
+             }
+
+
+             return response()->json( ['error'=> 'xuxemon alimentado']);
+
+         }catch(ValidationException|QueryException|Exception $e){
+             return response()->json( ['error'=>$e]);
+         }
+
+
+
+
+
+
 
 
     }
