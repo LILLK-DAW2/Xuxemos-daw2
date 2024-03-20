@@ -29,16 +29,16 @@ const routes : Routes=[
 
 
   },{
-    path:'inventarioUsuario',  component : InventarioComponent,
+    path:'inventarioUsuario',  component : InventarioComponent
 
 
-  }, {path:'modXuxemon/:id',  component : ModXuxemonComponent,
+  }, {path:'modXuxemon/:id',  component : ModXuxemonComponent
     },
 
   {
     path:'register',  component : RegisterComponent,
   }, {
-    path:'', redirectTo:'welcome',  pathMatch:'full',
+    path:'', redirectTo:'welcome',  pathMatch:'full'
   },
 
   ];

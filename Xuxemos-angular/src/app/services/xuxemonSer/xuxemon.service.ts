@@ -64,5 +64,13 @@ export class XuxemonService {
       data);
   }
 
+  alimentarXuxemon(chuche_id: number,xuxemon_id){
+    const data ={
+      chuche_id,xuxemon_id
+    }
+    return this.http.post('http://127.0.0.1:8000/alimentarXuxemon',
+      data);
+  }
+
 }
 
