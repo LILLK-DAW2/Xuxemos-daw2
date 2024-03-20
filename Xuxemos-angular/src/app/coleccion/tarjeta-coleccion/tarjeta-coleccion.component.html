@@ -8,15 +8,17 @@
         <p>{{ xuxemon.nombreXuxemon }}</p>
         <p>{{ xuxemon.tipo }}</p>
 
-        <select id="acciones" class="acciones">
-            <option value="0" disabled selected>Acciones</option>
-            <option value="1">Alimentar</option>
-            <option value="2">Curar</option>
-            <option value="3">Matar</option>
-            <option value="4">Vener</option>
-        </select>
-
-
-
+      <div class="bottones">
+        <button (click)="toggleCard()">a</button>
+        <div >
+          <div   [ngClass]="card">
+            <button >Alimentar</button>
+            <button >Curar</button>
+            <button >Matar</button>
+            <button >Vener</button>
+          </div>
+        </div>
       </div>
+
+    </div>
     </div>

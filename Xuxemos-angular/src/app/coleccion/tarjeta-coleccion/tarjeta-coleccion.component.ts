@@ -11,10 +11,20 @@ export class TarjetaColeccionComponent implements OnInit {
 
   @Input() xuxemon: XuxemonUser;
 
+  card :string = 'closed';
+
   constructor(private router: Router) {}
   ngOnInit(): void {
   }
 
+  toggleCard() {
+
+    if(this.card == 'closed'){
+      this.card = 'desplegable'
+    }else{
+      this.card = 'closed'
+    }
+  }
 
 
 }

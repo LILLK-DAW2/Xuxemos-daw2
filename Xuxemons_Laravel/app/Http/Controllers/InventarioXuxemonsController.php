@@ -102,41 +102,46 @@ class InventarioXuxemonsController extends Controller{
 
     protected function alimentarXuxemon(Request $request){
 
-         $config = ConfigLvlXuxemons::all()->first();
-
-         $xuxemon = InventarioXuxemons::where('id',$request['id'])->first();
-
-         $chuche = ChuchesUser::where('id',$request['id'])->first();
-
-         try{
-
-             if($chuche['cantidad']>0){
-                 $xuxemon['caramelos']++;
-                 $chuche['cantidad']--;
-                 if($xuxemon['tamano'] == 'pequeño'){
-                     if($xuxemon['caramelos']>=$config['peq-med']){
-                        $xuxemon['tamano'] = 'mediano';
-                        $xuxemon['caramelos']-$config['peq-med'];
-                     }
-                 }elseif($xuxemon['tamano'] == 'mediano'){
-                     if($xuxemon['caramelos']>=$config['med-gra']){
-                         $xuxemon['tamano'] = 'grande';
-                         $xuxemon['caramelos']-$config['med-gra'];
-                     }
-                 }
-
-                 $xuxemon->save();
-                 $chuche->save();
-             }
 
 
-             return response()->json( ['error'=> 'xuxemon alimentado']);
+        try {
+            $config = ConfigLvlXuxemons::first();
+            $xuxemon = InventarioXuxemons::where('id', $request['xuxemon_id'])->first();
+            $chuche = ChuchesUser::where('id', $request['chuche_id'])->first();
 
-         }catch(ValidationException|QueryException|Exception $e){
-             return response()->json( ['error'=>$e]);
-         }
 
+            if ($chuche->cantidad > 0) {
+                $xuxemon->caramelos++;
+                $chuche->cantidad--;
 
+                if($xuxemon->tamano == 'pequeño')
+                {
+
+                    if($xuxemon->caramelos >= $config->peq_med)
+                        {
+                            $xuxemon->tamano = 'mediano';
+                            $xuxemon->caramelos = $xuxemon->caramelos-$config->peq_med;
+                        }
+
+                }
+                elseif($xuxemon->tamano == 'mediano')
+                {
+
+                    if($xuxemon->caramelos >= $config->med_gra)
+                        {
+                            $xuxemon->tamano = 'grande';
+                            $xuxemon->caramelos = $xuxemon->caramelos- $config->med_gra;
+                        }
+                }
+
+                $xuxemon->save();
+                $chuche->save();
+            }
+
+            return response()->json(['xuxemon' => 'Xuxemon alimentado']);
+        } catch (ValidationException | QueryException | Exception $e) {
+            return response()->json(['error' => $e->getMessage()]);
+        }
 
 
 

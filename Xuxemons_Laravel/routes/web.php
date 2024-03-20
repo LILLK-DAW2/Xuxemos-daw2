@@ -39,6 +39,8 @@ Route::middleware('cors')->group(function (){
     Route::post('chuchesUserDebug',[ChuchesUserController::class,'debug']);
     Route::get('chuchesUserIndex',[ChuchesUserController::class ,'indexChuchesUsu']);
 
+    Route::post('alimentarXuxemon',[InventarioXuxemonsController::class,'alimentarXuxemon']);
+
 });
 
 

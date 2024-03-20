@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('config_lvl_xuxemons', function (Blueprint $table) {
             $table->id();
-            $table->integer('peq-med');
-            $table->integer('med-gra');
+            $table->integer('peq_med');
+            $table->integer('med_gra');
             $table->timestamps();
         });
     }

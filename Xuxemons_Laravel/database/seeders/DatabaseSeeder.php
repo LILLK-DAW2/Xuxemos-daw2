@@ -19,7 +19,9 @@ class DatabaseSeeder extends Seeder
                     XuxemonSeeder::class,
                     MochilaSeeder::class,
                     //InventarioXuxemonsSeeder::class
-                    chuchesSeeder::class
+                    chuchesSeeder::class,
+                    ConfigLvlXuxemonsSeeder::class
+
         ]);
     }
 }

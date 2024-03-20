@@ -5,7 +5,7 @@
   margin-left: 10px;
   background-color: bisque;
   width: 200px;
-  height: 450px;
+  height: fit-content;
   border-radius: 10px;
   content: normal;
   text-align: center;
@@ -32,4 +32,30 @@
   color: blueviolet; /* Color del texto */
   font-size: 16px; /* Tamaño de fuente */
 }
+.bottones {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+}
 
+.bottones button {
+  margin: 2px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bottones button:hover {
+  background-color: #45a049;
+}
+.desplegable{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.closed{
+  display: none;
+}
