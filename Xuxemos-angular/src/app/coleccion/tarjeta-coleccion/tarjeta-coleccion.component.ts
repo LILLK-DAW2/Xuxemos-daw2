@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import {XuxemonUser} from "../../models/xuxemonUser.model";
+import {ChuchesUser} from "../../models/chuchesUser.model";
 
 @Component({
   selector: 'app-tarjeta-coleccion',
@@ -10,6 +11,8 @@ import {XuxemonUser} from "../../models/xuxemonUser.model";
 export class TarjetaColeccionComponent implements OnInit {
 
   @Input() xuxemon: XuxemonUser;
+
+  chuches : ChuchesUser[]=[];
 
   card :string = 'closed';
 
@@ -25,6 +28,9 @@ export class TarjetaColeccionComponent implements OnInit {
       this.card = 'closed'
     }
   }
+  alimentarXuxemon(){
 
+
+  }
 
 }

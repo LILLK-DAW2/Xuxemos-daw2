@@ -36,12 +36,10 @@ export class LoginComponent implements OnInit {
     const nombre_u = this.loginForm.value.nombre_u;
     const password = this.loginForm.value.password;
 
-
-     this.userService.login(nombre_u, password).subscribe({
+    this.userService.login(nombre_u, password).subscribe({
       next: value =>this.router.navigate(['/menu',value['user_id']]) ,
       error: err => alert(err)
     });
-    //console.log(token);
 
   }
 }
